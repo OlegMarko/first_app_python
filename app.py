@@ -21,10 +21,10 @@ while search:
         temperature = w.get_temperature('celsius')
 
         print(
-            'Weather in the ' + city + ' is a ' + str(w.get_detailed_status()) + ' \n' +
-            'wind: ' + str(wind['speed']) + ' m/s \n' +
-            'humidity: ' + str(humidity) + ' mm \n' +
-            'temperature: ' + str(int(temperature['temp'])) + u"\u2103"
+            'Weather in the {} is a {} \n'.format(city, w.get_detailed_status()) +
+            'wind: {} m/s \n'.format(wind['speed']) +
+            'humidity: {} mm \n'.format(humidity) +
+            'temperature: {} \u2103'.format(int(temperature['temp']))
         )
     except Exception as e:
         print("Error: " + str(e))
